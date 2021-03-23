@@ -1,0 +1,83 @@
+body {
+	/*background: #f1f1d6;*/
+	background: white;
+}
+
+div.header {
+	margin: 10px;
+	height: 25px;
+	margin-bottom: 20px;
+}
+
+div.header label {
+	margin-left: 30px;
+}
+
+svg {
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+svg rect {
+	stroke: #d7d7d7;
+	stroke: #c2cbd1;
+}
+
+svg rect.empty {
+	fill: #f1f1f1;
+}
+
+svg rect.static {
+	fill: #97cff7;
+}
+
+svg rect.flying {
+	fill: #0d3b5c;
+}
+
+svg rect.prediction {
+	fill: #056ab3;
+}
+
+.row {
+	display: flex;
+}
+
+.logger {
+	
+	display: inline-block;
+}
+.rls, .ai {
+	display: none;
+}
+
+.logger-text{
+	height: 80vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.map{
+	left: 50px;
+}
+
+.start{
+	width: 100px;
+}
+
+.navbar-default {
+ 
+	height: 3vh;
+}
+
+.page{
+	height: 48px;
+}
+
+.main{
+	margin-top: -15px;
+}
+
+.main-sub-text{
+	margin-top: 10vh;
+}

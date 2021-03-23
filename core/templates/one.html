@@ -1,0 +1,117 @@
+{% load static %}
+<html>
+<head>
+	<title>Clouds</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+
+    <script type="text/javascript" src="{% static "scripts/one/vue.js" %}"></script>
+    <script type="text/javascript" src="{% static "scripts/one/constants.js" %}"></script>
+	
+    <script type="text/javascript" src="{% static "scripts/one/components/AI.js" %}"></script>
+    <script type="text/javascript" src="{% static "scripts/one/components/Events.js" %}"></script>
+    <script type="text/javascript" src="{% static "scripts/one/components/Logger.js" %}"></script>
+    <script type="text/javascript" src="{% static "scripts/one/components/Rls.js" %}"></script>
+    <script type="text/javascript" src="{% static "scripts/one/components/Screen.js" %}"></script>
+
+	<script type="text/javascript">
+
+		window.addEventListener("load", function(event) {
+			const app = new Vue({
+				el: '#app',
+				data: {
+					clouds: 1
+				},
+				methods : {
+					start: function() {
+						Event.fire('start', this.clouds);
+					},
+					changeClouds: function() {
+						this.clouds = this.clouds ? 0 : 1;
+					},
+				}
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<div id="app">
+
+		<nav class="navbar navbar-default">
+			<div class="container">
+			  <div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">РЛС</a>
+			  </div>
+		  
+			  <div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav">
+				  <li class="active">
+					<a class="page" href="/alg1">Алгоритм 1 <span class="sr-only">(current)</span></a>
+				  </li>
+				  <li>
+					<a href="/alg2">Алгоритм 2</a>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		  </nav>
+
+		<div class="container-fluid">
+			<div class="row main">
+				<div class="col-md-10 map">
+					<div>
+						<div class="header">
+							<button @click="start" class="btn btn-info start">Почати</button>
+							<label>Хмари <input type="checkbox" @click="changeClouds" checked /></label>
+						</div>
+						<screen></screen>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="column-right">
+						<div class="header"><strong>Логгер</strong></div>
+						<div class="logger-text">
+							<logger></logger>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--<div class="row">
+
+
+
+			<div>
+				<div class="header">
+					<button @click="start">Start</button>
+					<label>Clouds <input type="checkbox" @click="changeClouds" checked /></label>
+				</div>
+				<screen></screen>
+			</div>
+			<div class="column-right">
+				<div class="header"><strong>Logger</strong></div>
+				<div class="logger-text">
+					<logger></logger>
+				</div>
+			</div>
+		</div> -->
+	
+		<ai></ai>
+		<rls></rls>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

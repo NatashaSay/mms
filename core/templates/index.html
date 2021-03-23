@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Clouds</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static "css/styles.css" %}">
+      
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <nav class="navbar navbar-default">
+			<div class="container">
+			  <div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">РЛС</a>
+			  </div>
+		  
+			  <div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav">
+				  <li>
+					<a class="page" href="/alg1">Алгоритм 1</a>
+				  </li>
+				  <li>
+					<a href="/alg2">Алгоритм 2</a>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		  </nav>
+
+        <section id="main-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 main-text">
+                        <h3 class="text-center">Предикатна модель процесних знань при виявленні структури сигналів
+                            від пристрою РЛС</h3>
+
+                            <div class="col-md-6 main-sub-text">
+                                <p>У розроблену модель входять процедури формалізації та аналізу символьного моделі точкових об'єктів на основі алгебри предикатів і операцій, призначені
+                                    для створення предикатной моделі процесних знань при виявленні і розпізнаванні повітряних точкових об'єктів <a href="/alg1">(Алгоритм 1)</a>.</p><br><br>
+                                    <p> Символьна модель спостережуваних точкових об'єктів формується з набору радіолокаційних сигналів
+                                    N інформаційних осередків від кожного елемента зони огляду. Зазвичай з отриманих сигналів формується карта або матриця даних. У нашому випадку формується символьна модель сигнальних відміток точкових об'єктів типу літак, вертоліт <a href="/alg2">(Алгоритм 2)</a>.</p>
+                            </div>
+                    </div>
+                
+                </div>
+            </div>
+        </section>
+
+        
+
+
+        
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>
